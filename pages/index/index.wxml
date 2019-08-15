@@ -1,0 +1,79 @@
+
+<import src="../../tpl/newsList/newsList.wxml"/>
+
+
+<!--index.wxml-->
+<view class="container">
+
+
+
+<!-- 搜索报价 -->
+<!-- banner -->
+<view class='h50'>
+  <view class='ss-news-banner relative'>
+    <view class='ss-news-banner-cont absolute'>
+        <view class='ss-news-search-box'>
+          <input type='text' placeholder='搜索报价'value="{{inputValue}}" confirm-type="search"  bindinput="inputTyping" bindconfirm="searchAction"></input>
+        </view>
+        <text class='ss-news-search-btn absolute verticalMiddle'>取消</text>
+    </view>
+  </view>
+</view>
+<!--功能列表导航 -->
+<view class='ss-index-nav ss-flex'>
+  <view class='ss-index-nav-item center ss-flex-item' bindtap="tapPrice">
+    <image src='../../assets/dzbj.png'></image>
+    <text class='fs14 onec'>大宗报价</text>
+  </view>
+
+  <view class='ss-index-nav-item center ss-flex-item' bindtap="tapBatchCar">
+    <image src='../../assets/tlpc.png'></image>
+    <text class='fs14 onec'>铁路批车</text>
+  </view>
+
+  <view class='ss-index-nav-item center ss-flex-item'>
+    <image src='../../assets/wtfy.png'></image>
+    <text class='fs14 onec'>委托发运</text>
+  </view>
+
+  <view class='ss-index-nav-item center ss-flex-item'>
+    <image src='../../assets/wtdz.png'></image>
+    <text class='fs14 onec'>委托到重</text>
+  </view>
+</view>
+<!-- 公告 -->
+<view class='bgccc gonggao'>
+  <view class='swiper-adv-box relative'>
+    <view class='swiper-adv-licon absolute verticalMiddle l10 fs12'>
+      <text>方略 </text>
+      <text class='bgcf40 whiteoc'> 公告</text>
+    </view>
+    <swiper class="swiper-adv" vertical="true" autoplay="true" circular="true" interval="4000">
+      <block wx:for="{{msgList}}" wx:for-index='idx' wx:key='idx'>
+        <navigator url="" open-type="navigate">
+          <swiper-item class='swiper-adv-item'>
+            <view class="fs12 onec ellipsis absolute wb100 verticalMiddle">{{item.title}}</view>
+          </swiper-item>
+        </navigator>
+      </block>
+    </swiper> 
+    <text class='getAll pl5 absolute verticalMiddle r10 fs14 threec swiper-adv-font'>更多</text>
+  </view>
+</view>
+<!-- 资讯 -->
+<view class="mt10">
+  <block wx:for='{{pageList01}}'  wx:for-index='idx' wx:key='idx'>
+       <template is='newsList' data='{{...item}}' />     
+  </block>
+</view>
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>

@@ -1,0 +1,12 @@
+<view class='selectBox'>
+  <view class='select' catchtap='selectTap'>
+    <text class='select_text'>{{selectData[index]}}</text>
+    <image class='select_img {{selectShow && "select_img_rotate"}}' src='../../assets/jiantou.jpg' background-size="contain">
+    </image>
+  </view>
+
+  <view class='optionBox' wx:if="{{selectShow}}">
+    <text class='option' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}
+    </text>
+  </view>
+</view>

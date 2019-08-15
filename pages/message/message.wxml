@@ -1,0 +1,11 @@
+<!-- 引入消息列表的模板 -->
+<import src="../../tpl/messageList/messageList.wxml"/>
+
+
+<view>
+  <view class='pt20'>
+    <block wx:for="{{messageList}}" wx:for-index='idx' wx:key='idx'>
+      <template is='messageList' data='{{...item}}' />
+    </block>
+  </view>
+</view>

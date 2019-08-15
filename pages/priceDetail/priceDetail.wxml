@@ -1,0 +1,98 @@
+<view>
+  <view class='pl20 pt20 pr10'>
+    <view class='pt10 pb10 borderBtm_fc'>
+      <text class='fs16'>{{goodsManagerDetail.goods.goodsName}}</text>
+      <text class='threec fr fs14'>更新时间:{{goodsManagerDetail.offerTimeStr}}</text>
+    </view>
+
+    <view class='fs16 pt10'>
+      <view class='wb60 blockLine'>
+        <text class='threec'> 含税价（元/吨）</text><text> {{goodsManagerDetail.price1}}</text>
+      </view>
+      <view class='ml30 wb30 blockLine'>
+        <text class='threec'> 涨跌</text><text> {{goodsManagerDetail.floatingRate1}}</text>
+      </view>
+      <view class='wb10 blockLine center'>
+        {{goodsManagerDetail.producingArea.contentName}}
+      </view>
+      <view>
+      <view class="wb80 middle mt20">
+        <text>{{goodsManagerDetail.goods.parameters}}</text>
+      </view>
+        <!-- <view class="wb80 middle">
+            <view class="bg-g pb20 pt5 clear" bindtap='tapPriceDetail'>
+              <view class='clear'>
+                <view class="fl mt10">
+                  <text class='threec'>S硫≤ </text>{{num.a}}
+                </view>
+                <view class="fr mt10">
+                  <text class='threec'>V灰粉≤ </text>{{num.a}}
+                </view>
+              </view>
+
+              <view class='clear'>
+                <view class="fl mt10">
+                  <text class='threec'>CRI反映性≤ </text>{{num.a}}
+                </view>
+                <view class="fr mt10">
+                  <text class='threec'>C故性碳≤ </text>{{num.a}}
+                </view>
+              </view>
+
+              <view class='clear'>
+                <view class="fl mt10">
+                  <text class='threec'>M25≤ </text>{{num.a}}
+                </view>
+                <view class="fr mt10">
+                  <text class='threec'>M40≤ </text>{{num.a}}
+                </view>
+              </view>
+
+              <view class='clear'>
+                <view class="fl mt10">
+                  <text class='threec'>S硫≤ </text>{{num.a}}
+                </view>
+                <view class="fr mt10">
+                  <text class='threec'>V灰粉≤ </text>{{num.a}}
+                </view>
+              </view>
+              <view class='clear'>
+                <view class="fl mt10">
+                  <text class='threec'>S硫≤ </text>{{num.a}}
+                </view>
+              </view>
+              
+            </view>
+        </view> -->
+      </view>
+    </view>
+    
+    <view class='mt20 bluec fs20 pt10 pb10 borderBtm_fc'>
+      <text class='fs16'>历史报价</text>
+      <view class='fr w140'>
+        <selector selectData="{{selectData}}"></selector>
+      </view>
+    </view>
+    
+    <view class="table">
+      <view class="tr bg-w fs16">
+        <view class="th"><text>含税价</text></view>
+        <view class="th"><text>涨跌</text></view>
+        <view class="th date"><text>日期</text></view>
+      </view>
+      <block wx:for="{{goodsOfferDetailList}}" wx:key="{{id}}">
+        <view class="tr bg-g pb20pt5" bindtap='tapPriceDetail'>
+          <view class="td fs14">
+            <text>{{item.price1}}</text>
+          </view>
+          <view class="td fs14">
+            <text class='ellipsis'>{{item.floatingRate1}}</text>
+          </view>
+          <view class="td fs14">
+            <text>{{item.offerTimeStr}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

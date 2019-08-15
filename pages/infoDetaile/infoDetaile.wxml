@@ -1,0 +1,21 @@
+<!--pages/newsDetails/newsDetails.wxml-->
+<view class='ss-news-details-box'>
+    <text class='tit block'>1月份全球粗钢产量1.467亿吨 中国产量占比51.12%</text>
+
+    <view class='pb10'>
+      <text class='fs12 onec'>2018-04-12<text class='bluec pl20'>方略陆港</text></text>
+    </view>
+
+    <text class='font'>1月份全球粗钢产量1.467亿吨 中国产量占比51.12%1月份全球粗钢产量1.467亿吨 中国产量占比51.12%1月份全球粗钢产量1.467亿吨 中国产量占比51.12%1月份全球粗钢产量1.467亿吨 中国产量占比51.12%</text>
+
+    <text class='font'>1月份全球粗钢产量1.467亿吨 中国产量占比51.12%1月份全球粗钢产量1.467亿吨 中国产量占比51.12%1月份全球粗钢产量1.467亿吨 中国产量占比51.12%1月份全球粗钢产量1.467亿吨 中国产量占比51.12%</text>
+
+    <view class='fs14 threec clearfix mt10'>
+        <text class='fl'>阅读100</text>
+        <text class="fl ml20 pl20 ss-news-dz {{isThumbs ? 'active' : ''}}" bindtap='thumbsUphandle'>
+          <text wx:if='{{!isThumbs}}'>点赞</text>
+          <text wx:else>已点赞</text>
+        </text>
+        <text class='fr'>投诉</text>
+    </view>
+</view>

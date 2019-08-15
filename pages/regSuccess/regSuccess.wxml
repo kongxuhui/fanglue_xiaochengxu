@@ -1,0 +1,6 @@
+<view>
+  <view class='mt30 pl10 pr10'>
+    <text>此账号为未注册用户，系统已自动为您注册成功。</text>
+    <button class='mt30 w80' bindtap='tabPersonInfo'>确定</button>
+  </view>
+</view>

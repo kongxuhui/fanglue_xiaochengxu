@@ -1,0 +1,35 @@
+<view>
+<block wx:for="{{goodsManagerDetailList}}" wx:key="{{id}}">
+  <view class='pl20 pt20'>
+    <view class='bluec fs20 pt10 pb10 borderBtm_blue'>
+      <text>{{item.categoryName}}</text>
+    </view>
+    <view class="table">
+      <view class="tr bg-w fs16">
+        <view class="th">品名</view>
+        <view class="th">指标/规格</view>
+        <view class="th ">产地</view>
+      </view>
+      <block wx:for="{{item.childGoodsManagerDetail}}" wx:key="{{id}}" wx:for-item="item_1">
+        <view class="tr bg-g pb20 borderBtm pt5" bindtap='tapPriceDetail' data-id="{{item_1.id}}">
+          <view class="td fs14">
+            <view>{{item_1.goods.goodsName}}</view>
+            <view class="threec mt10">{{item_1.offerTimeStr}}</view>
+          </view>
+          <view class="td fs14">
+            <view class='ellipsis'>{{item_1.goods.parameters}}</view>
+            <view class="mt10">
+              含税价 <text class='redc'>{{item_1.price1}}</text> 
+              涨幅 <text class='{{item_1.floatingRate1}}.indexof("+")  == 0 ? redc : bluec'>{{item_1.floatingRate1}}</text> 
+              备注 <text class='threec'>{{item_1.remark}}</text>
+            </view>
+          </view>
+          <view class="td fs14">{{item_1.producingArea.contentName}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  </block>
+  <!-- 电话 -->
+  <view  bindtap='tel' class='fixed b66 r10 bgcf40 call'></view>
+</view>

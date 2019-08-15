@@ -1,0 +1,79 @@
+/**index.wxss**/
+
+/* 顶部搜索 */
+
+.ss-news-banner-cont {
+  padding: 10px;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  /* background-color: #e17377; */
+}
+
+.ss-news-search-box input {
+  width: 74%;
+  font-size: 13px;
+  color: #333;
+  padding: 2px 30px;
+  border-radius: 14px;
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABmUlEQVQ4T52TwW3jMBBFZ2ib16SDOB14O3A6yHZgV5Do4CF8880gfbBTwaaD1VYQpYKoBJWQswhrgi+IXq43RhZLQIBADt/8+TNkytZ2u50aYx6I6J6Zp8NRraoHa+2voije83j8c9oIISyIaE9Er6paGWNqnHVdNweQiK6Y+buI9Ptp9QBcRhYiWjjnygw6Y+br8Xhcxxg3qrpg5nkOYcgejUZvqrrMLwPivUfmZ2b+OZlMihjjM5SIyN1JQQgBmaciguC/1n6/v27btiKi0lp7aNu2Mcbcr1Yr7BGHEBrId84B9OkKIcyI6E1EEI8SGxF5TABl5rtEvARBqev1uvHebwYfYG6v4J8AmbF/lAxAhbY55zaXsuf7Q3yZSgYA/X8QkW9fAZIXx+PxFuX0JcDlGCOGo0zGXAJ572tmrvK4NEgzlEFEL9ba5fnIDpl/EBHiirxj+SijVQdVvSGiOo2yqsJtfE+q2jAzxn0pIhiq328hyd7tdnNVxVAB+A5lXdeVqebBM6jpIScFXxl41gkY30P+C5A/wA8p596aXtUyvQAAAABJRU5ErkJggg==)  no-repeat #fff 10px center;
+  background-size:14px 14px;
+  z-index:-1;
+}
+
+.ss-news-search-btn {
+  color: rgb(39, 34, 34);
+  right: 10px;
+  font-size: 14px;
+}
+
+/* 功能导航 */
+
+.ss-index-nav-item image {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.ss-index-nav {
+  padding: 15px 0;
+  background: #fff;
+}
+
+.ss-index-nav-item text {
+  padding-top: 5px;
+  display: block;
+}
+
+/* 公告 */
+
+.gonggao {
+  padding: 5px 10px;
+}
+
+.swiper-adv-box {
+  background: #fff;
+  border-radius: 15px;
+  height: 30px;
+}
+
+.swiper-adv {
+  border-radius: 15px;
+  background: #fff;
+  height: 30px;
+  padding-left: 66px;
+  padding-right: 60px;
+}
+
+.swiper-adv-item {
+  height: 20px;
+}
+
+.getAll {
+  border-left: 2px solid #ccc;
+}
+
+/* 资讯 */
+ @import "../../tpl/newsList/newsList.wxss"; 
+

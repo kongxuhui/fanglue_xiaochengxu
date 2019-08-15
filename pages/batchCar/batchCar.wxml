@@ -1,0 +1,71 @@
+<!-- tab -->
+<block wx:if="{{loadingShow}}">
+  <loading>
+    加载中...
+  </loading>
+</block>
+
+<view>
+<!-- 顶部tab -->
+  <view class='scroll-box'>
+    <view class='ss-nav relative  scroll-box-list'>
+      <block  wx:for="{{navdata}}" wx:for-index="idx" wx:key="idx">
+        <view  class="info-love center ss-nav-item ss-flex-item {{currentTab==idx ? 'on' : ''}}" data-current="{{idx}}"  bindtap="swichNav" data-id="{{item.id}}" data-name="{{item.name}}" data-approval="{{item.approvalDateStr}}" data-start="{{item.approvalDateStart}}" data-end="{{item.approvalDateEnd}}">
+          <text class='fs14'>{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+<!-- content -->
+  <view>
+    
+    <view class='fr fs12 threec pr20 pt20 pb10'>
+      <text wx:if="{{detailId != 1}}">日期：{{approvalDateStart}} - {{approvalDateEnd}}</text>  
+      <text wx:else>日期：{{approvalDateStart}}</text>    
+    </view>
+
+    <view class='middle mt20 wb80 clear h60' wx:if="{{detailId == 5}}">
+      <view class="threec section__title wb40 fl clear">开始日期</view>  
+      <picker mode="date" value="{{date}}" start="2016-09-01" end="2020-09-01" bindchange="bindDateChange_start">
+        <view class="picker wb40 fl dataInput bgfff">
+          <input disabled="true" class="pl10" value="{{approvalDateStart}}" type="text" />
+        </view>
+      </picker>
+      <view class="threec section__title wb40 fl clear mt10">结束日期</view>
+      <picker mode="date" value="{{date}}" start="2016-09-01" end="2020-09-01" bindchange="bindDateChange_end">
+        <view class="picker wb40 fl dataInput mt10 bgfff">
+          <input disabled="true" class="pl10" value="{{approvalDateEnd}}" type="text" />
+        </view>
+      </picker>
+    </view>
+    <view class="wb80 mt10 middle" wx:if="{{detailId == 5}}">
+      <button type="primary" size="default" bindtap="bindDateQuery">确定</button>      
+    </view>
+    <view class='pt60 pl20'>
+      <text class='fs22'>{{titleName}}批车合计 </text>
+      <text class='bluec fs30'> {{trainApproval.totalApprovalNum}} </text>
+      <text class='fs22'> 车</text>
+    </view>
+    <view class='pt40 pl20 pb20'>
+      <text class='fs22'>批车率  </text>
+      <text class='redc fs30'>  {{trainApproval.approvalRate}}%</text>
+    </view>
+    
+    <view class="table">
+      <view class="tr bg-w">
+        <view class="th">类型</view>
+        <view class="th">需求数</view>
+        <view class="th ">批准数</view>
+      </view>
+      <block wx:for="{{trainApprovalList}}" wx:key="{{code}}">
+        <view class="tr bg-g">
+          <view class="td">{{item.trainGoods.contentName}}</view>
+          <view class="td">{{item.trainGoodsTotalRequiredNum}}</view>
+          <view class="td">{{item.trainGoodsTotalApprovalNum}}</view>
+        </view>
+      </block>
+      <view class='fr fs14 twoc' bindtap='tapBatchCarDetail'>查看明细>></view>
+    </view>
+  </view>
+</view>
+

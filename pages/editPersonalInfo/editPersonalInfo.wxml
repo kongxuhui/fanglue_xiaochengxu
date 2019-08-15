@@ -1,0 +1,58 @@
+<view>
+  <view class='pl20 pt20'>
+    <form bindsubmit="formSubmit">
+    <view class='relative h60 clear borderBtm pr40 pt10 pb10' bindtap='chooseImage'>
+      <text class='fl fs16 lh66'>头像</text>
+      <image class='absolute ss-yzm-btn_1 r25' style="width: 80px; height: 80px; " src="{{picPaths}}"></image>
+      <image bindtap='chooseImage' class='absolute ss-yzm-btn_1' style="width: 20px; height: 20px; display: inline-block;" src="../../assets/jt_right.png"></image>
+    </view>
+
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>昵称</text>
+      <input name="userName" class="fr threec fs12 borderBtm blockLine h30 wb70" confirm-type="next" type="text" value="{{userInfo.userName}}"/>
+    </view>
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>性别</text>
+      <radio-group name="sex" class="fr wb70">
+        <label wx:for="{{sexOptions}}">
+          <radio value="{{item.value}}" checked="{{item.value === userInfo.sex ? 'true' : ''}}"/>{{item.name}}
+        </label>
+      </radio-group>
+    </view>
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>所属企业</text>
+      <input disabled name="input4" disabled class="fr threec fs12 borderBtm blockLine h30 wb70" confirm-type="next" type="text" value="{{userInfo.customer.customerName}}"/>
+    </view>
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>所在地区</text>
+      <picker name="area" class="fr wb70" mode="region" bindchange="bindRegionChange" value="{{region}}">
+        <view class="picker">
+          {{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
+    </view>
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>手机</text>
+      <input disabled class="fr threec fs12 borderBtm blockLine h30 wb70" confirm-type="next" type="number" value="{{userInfo.phone}}"/>
+    </view>
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>座机</text>
+      <input name="tel" class="fr threec fs12 borderBtm blockLine h30 wb70" confirm-type="next" type="number" value="{{userInfo.tel}}"/>
+    </view>
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <view class='fl fs16'>邮箱</view>
+      <input name="email" class="fr threec fs12 borderBtm blockLine h30 wb70" confirm-type="done" type="text" value="{{userInfo.email}}"/>
+    </view>
+    <view class='mt30 w80 pr20'>
+      <button type="primary" form-type='submit'>提交</button>
+    </view>
+    </form>
+  </view>
+</view>
+
+   <!-- name: '杨先生',
+        sex: '男',
+        compant: '方略陆港',
+        tel: '12345678',
+        phone: '0351-123456',
+        mail: ' -->

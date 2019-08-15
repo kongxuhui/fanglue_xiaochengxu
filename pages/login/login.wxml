@@ -1,0 +1,12 @@
+<view>
+  <view class='center mb50 mt50'>
+    <image style="width: 230px; height: 70px;" src="../../assets/logo.png"></image>
+  </view>
+    <!-- 按钮 -->
+  <view class='mt30 mb10 ml10 mr10'>
+    <button type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">微信登录</button>
+  </view>
+  <view class='mt30 mb10 ml10 mr10'>
+    <button  type='warn' plain="true" bindtap='tapPhoneLogin'>手机号登录</button>
+  </view>
+</view>

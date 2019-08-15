@@ -1,0 +1,88 @@
+/* pages/batchCar/batchCar.wxss */
+
+/* 横向滚动 */
+
+.scroll-box {
+  overflow: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  /* height:42px; */
+}
+
+.scroll-box::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-box-list {
+  white-space: nowrap;
+}
+
+.info-love {
+  display: inline-block;
+}
+
+/* 横向滚动 */
+
+/* tab start */
+
+.ss-nav {
+  background: #fff;
+  z-index: 10;
+}
+
+.ss-nav-item text {
+  padding: 0 5px;
+  line-height: 38px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 60px;
+}
+.ss-nav-item{
+  border-bottom: 2px solid #faeaea;
+  width: 20%;
+}
+.ss-nav-item.on{
+  border-bottom: 2px solid #c31f23;
+
+}
+.ss-nav-item.on text {
+  color: #c31f23;
+}
+/* tab end */
+/* table */
+.table {
+  border: 0px solid darkgray;
+  padding: 0 20px;
+}
+.tr:first-child{
+  border-bottom: 2px solid #ccc;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+}
+.th:first-child,
+.td:first-child{
+  width: 70%;
+  justify-content: left;
+  text-align: left;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+    color: #807d7d;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}

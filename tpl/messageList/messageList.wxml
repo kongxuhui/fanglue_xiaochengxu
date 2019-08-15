@@ -1,0 +1,19 @@
+ 
+
+<template name="messageList">
+    <view id='{{id}}' bindtap='messageDetaile' class='clearfix '>
+      <view class='fl wb10 center'>
+          <image style="width: 16px; height: 16px;" src="../../assets/newMessage.png"></image>
+      </view>
+      <view class='wb90 pb10 mb10 relative b-line fl'>
+        <view class='wb80 clearfix mb10'>
+          <text class='onec fs16 fl lh21'>{{message}}</text>
+          <text class='threec fs14 fr lh21'>{{date}}</text>
+        </view>
+        <view class='wb80'>
+          <text class='block twoc fs12 ellipsis'>{{content}}</text>
+        </view>
+        <view class='absolute fr ss-yzm-btn'><image style="width: 20px; height: 20px;" src="../../assets/jt_right.png"></image></view>
+      </view>
+    </view>
+</template>  

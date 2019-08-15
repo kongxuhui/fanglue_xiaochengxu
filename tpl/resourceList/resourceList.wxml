@@ -1,0 +1,31 @@
+<template name="resourceList">
+  <view class='ss-main-list-item b-line relative'> 
+        <view class='hea'>
+          <text class='fs15 onec'>信用贷</text>
+        </view> 
+        <view class='con  clearfix'>
+            <view class='lef fl mr10 pt10'>
+                <text class='fs20 redc block'>3000000</text>
+                <text class='fs12 redc block'>（元）</text> 
+                <view class='lef-bottom fs12 yellowc mt10'>最高额度</view>
+            </view> 
+            <view class='righ relative'>
+                <!-- 按钮的类型 --> 
+                <view wx:if="{{btnType == 1}}" class='absolute r0 t0 ss-mian-list-rbtn btn-red'>{{btnFont}}</view>
+                <view wx:elif="{{btnType == 2}}" class='absolute r0 t0 ss-mian-list-rbtn btn-grey'>{{btnFont}}</view>
+                <view wx:else="{{btnType == 3}}" class='absolute r0 t0 ss-mian-list-rbtn redc'>{{btnFont}}</view> 
+
+                <view class='righ-top fs14 pb5'>
+                    利率0.83%-1.25%
+                </view> 
+                <text class='fs12 threec block'>额度范围10万--30万</text> 
+                <text class='fs12 threec block'>期限范围12月--24个月 </text> 
+                <view class=' ss-flex pt10 fs12 yellowc'>
+                    <text class='ss-flex-item'>无需证件</text>
+                    <text class='ss-flex-item'>无需担保</text>
+                    <text class='ss-flex-item'>无需担保</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>  

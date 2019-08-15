@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "selector": "../../components/selector/selector"
+  },
+  "navigationBarTitleText": "报价详情"
+}

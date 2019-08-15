@@ -1,0 +1,41 @@
+<!-- 初次进入小程序显示页面 -->
+<view>
+  <!-- 未登录状态显示 -->
+  <block wx:if="{{login == false}}">
+    <!-- logo -->
+    <view class='center mb50 mt50'>
+      <image style="width: 230px; height: 70px;" src="../../assets/logo.png"></image>
+    </view>
+    <!-- 注册登录 -->
+    <view class='mt30 mb10 ml10 mr10'>
+      <button bindtap="tabLogin">登录/注册</button>
+    </view>
+  </block>
+  
+  <!-- <view class='center'>
+    <text class='fs12 redc' bindtap='tabLogin'>已有账号？去登录</text>
+  </view> -->
+<block  wx:else>
+  <!-- 已登录状态 -->
+  <view class='wb80 clear middle'>
+    <view class='relative pt30 pb20 borderBtm'>
+      <view class='loginPhoto blockLine'><image style="width: 60px; height: 60px; display: inline-block;" src="../../assets/photo.png"></image></view>
+      <text class='absolute fs16 l80 t30'>{{userInfo.userName}}</text>
+      <view class='absolute r0 t60' bindtap='tabPersonalInfo'><image style="width: 20px; height: 20px; display: inline-block;" src="../../assets/xiugai.png"></image></view>
+    </view>
+    <view class='mt30 relative clear h30' bindtap='tabPersonalInfo'>
+      <view class='fl'><image style="width: 30px; height: 30px; display: inline-block;" src="../../assets/person.png"></image></view>
+      <text class='ml20 fs16 absolute t2 l30'>个人资料</text>
+      <view class='absolute t2 r0'><image style="width: 20px; height: 20px; display: inline-block;" src="../../assets/jt_right.png"></image></view>
+    </view>
+    <view class='mt10 relative borderBtm pb20 clear h30' bindtap='tabResetPassword'>
+      <view class='fl'><image style="width: 30px; height: 30px; display: inline-block;" src="../../assets/resetPassword.png"></image></view>
+        <text class='ml20 fs16 absolute t2 l30'>{{getCodeBtnTxt}}</text>
+      <view class='absolute t2 r0'><image style="width: 20px; height: 20px; display: inline-block;" src="../../assets/jt_right.png"></image></view>
+    </view>
+    <view class='threec mt240 center fs16' bindtap='goout'>
+      <text>退出登录</text>
+    </view>
+  </view>
+  </block>
+</view>

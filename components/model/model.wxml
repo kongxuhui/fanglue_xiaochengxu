@@ -1,0 +1,14 @@
+
+<view class="model {{isShowModel?'show':'close'}}">
+  <!--弹窗样式可自定义-->
+  <view class="model-pack"> 
+    <view class="model-title">{{ModelTitle}}</view>
+    <view class="model-content"><slot></slot></view>
+    <view class="model-button">
+      <view data-modelid="{{ModelId}}" class="model-button-cancel {{isShowConfirm?'close':'show'}}" bindtap="_cancel">取消</view>
+      <view data-modelid="{{ModelId}}" class="model-button-confirm {{isShowConfirm?'close':'show'}}" bindtap="_confirm">确定</view>
+      <button data-modelid="{{ModelId}}" open-type="getUserInfo" class="confirm {{isShowConfirm?'show':'close'}}"           bindgetuserinfo="_confirm">授权登陆</button> 
+    </view>
+  </view>
+</view>
+ 

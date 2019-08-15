@@ -1,0 +1,24 @@
+ 
+
+<template name="batchCarList">
+    <view class='pl10 pr10 pb10 borderBtm wb90 middle mb30'>
+      <view class='clearfix lh21'>
+        <text class='onec fs16 fl'>{{customer.contentName}}</text>
+        <text class='redc fs16 fr'>{{approvalDateStr}}</text>
+      </view>
+      <view class='twoc fs14 clearfix mt10'>
+        <view class='fl fs14'><text>{{trainGoods.contentName}}</text></view>
+        <view class='fr fs14'>
+          <text>需 {{requiredNum}}</text>
+          <text class='ml10'>报 {{requestNum}}</text>
+          <text class='ml10'>批 {{approvalNum}}</text>
+        </view>
+      </view>
+      <view class='twoc fs14 block mt10'>
+        <view class='mt20'><text>货物产地：{{producingArea.contentName}}</text></view>
+        <view class='mt20'><text>短倒：{{logistics.contentName}}</text></view>
+        <view class='mt20'><text>到站：{{destination.contentName}}</text></view>
+        <view class='mt20'><text>收货人：{{consignee.contentName}}</text></view>
+      </view>
+    </view>
+</template>  

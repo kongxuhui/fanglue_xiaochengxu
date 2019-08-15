@@ -1,0 +1,16 @@
+ 
+
+<template name="newsList">
+    <view class='ss-news-item' id='{{id}}' bindtap='tapInfoDetaile'>
+      <view class='clearfix ss-news-item-con relative b-line'>
+          <view class='img fl mr10'>
+            <image src='{{image}}'></image>
+          </view> 
+          <view class='con'>
+            <text class='block ellipsis fs14 onec'>{{title}}</text>
+            <text class='fs12 threec tline-font'>{{content}}</text>
+            <view class='clearfix'><text class='fr fs12 threec'>{{date}}</text></view>
+          </view>
+        </view>
+    </view>
+</template>  

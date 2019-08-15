@@ -1,0 +1,31 @@
+<block wx:if="{{loadingShow}}">
+  <loading>
+    加载中...
+  </loading>
+</block>
+
+<view>
+<!-- logo -->
+<form bindsubmit="formSubmit">
+  <view class='center mb50 mt50'>
+    <image style="width: 230px; height: 70px;" src="../../assets/logo.png"></image>
+  </view>
+  <view class='wb80 middle'> 
+    <view class='mb20'>
+      <image style="width: 24px; height: 24px; display:inline-block;" src="../../assets/login.png"></image>
+      <input bindinput="bindPhone" class="ml30 threec fs12 borderBtm blockLine h30 wb70" maxlength='11' confirm-type="next" type="tel" placeholder="请输入手机号" />
+    </view>
+    <view class='mb20'>
+      <image style="width: 24px; height: 24px; ss-yzm-btn_1" src="../../assets/testword.png"></image>
+      <input id="password"  name="password" class="ml30 threec fs12 borderBtm blockLine h30 wb40" confirm-type="done" maxlength="6" placeholder="请输入验证码" />
+      <view class='border blockLine threec pl5 pr5 pt5 pb5 fs12 ml10 ss-yzm-btn_1' wx:if="{{!isShow}}"  bindtap='getCode'>获取验证码</view>
+      <view class='border blockLine threec pl5 pr5 pt5 pb5 fs12 ml10 ss-yzm-btn_1' wx:if="{{isShow}}">{{sec}}秒后重新发送</view>
+    </view>
+  </view>
+  
+  <view class='mt30 mb10 ml10 mr10'>
+    <button type='warn' plain="true" formType="submit">登录/注册</button>
+    <button class='mt20' type='warn' plain="true" bindtap='tabRePasswordLogin'>账号密码登录</button>
+  </view>
+  </form>
+</view>

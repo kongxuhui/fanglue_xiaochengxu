@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/home/home",
+    "pages/price/price",
+    "pages/message/message",
+    "pages/personCenter/personCenter",
+    "pages/information/information",
+    "pages/infoDetaile/infoDetaile",
+    "pages/batchCar/batchCar",
+    "pages/batchCarDetail/batchCarDetail",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/phoneLogin/phoneLogin",
+    "pages/resetPassword/resetPassword",
+    "pages/personalInfo/personalInfo",
+    "pages/regSuccess/regSuccess",
+    "pages/passwordLogin/passwordLogin",
+    "pages/findPassword/findPassword",
+    "pages/editPersonalInfo/editPersonalInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ccc",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#818181",
+    "selectedColor": "#e44a37",
+    "borderStyle": "white",
+    "backgroundColor": "#f7f7f7",
+    "list": [
+      {
+        "selectedIconPath": "assets/home_1.png",
+        "iconPath": "assets/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "assets/price_1.png",
+        "iconPath": "assets/price.png",
+        "pagePath": "pages/price/price",
+        "text": "报价"
+      },
+      {
+        "selectedIconPath": "assets/message_1.png",
+        "iconPath": "assets/message.png",
+        "pagePath": "pages/message/message",
+        "text": "消息"
+      },
+      {
+        "selectedIconPath": "assets/personalCenter_1.png",
+        "iconPath": "assets/personalCenter.png",
+        "pagePath": "pages/personCenter/personCenter",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

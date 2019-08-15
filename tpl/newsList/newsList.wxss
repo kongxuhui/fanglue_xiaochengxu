@@ -1,0 +1,39 @@
+/* 新闻列表 */
+
+.ss-news-item {
+  padding: 0 10px;
+  background: #fff;
+}
+
+.ss-news-item:last-child .ss-news-item-con:after {
+  display: none;
+}
+
+.ss-news-item-con {
+  padding: 10px 0;
+}
+
+.ss-news-item-con .img {
+  width: 90px;
+  height: 75px;
+  border: 1px solid #c9c9c9;
+}
+
+.ss-news-item-con .img image {
+  display: block;
+  width: 90px;
+  height: 75px;
+}
+
+.tline-font {
+  margin: 5px 0;
+  height: 32px;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: 2; /** 显示的行数 **/
+  overflow: hidden; /** 隐藏超出的内容 **/
+}
+
+/* 新闻列表 */

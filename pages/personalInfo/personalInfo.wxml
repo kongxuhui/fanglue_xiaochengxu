@@ -1,0 +1,48 @@
+<view>
+  <view class='pl20 pt20'>
+
+    <view class='relative h60 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16 lh66'>头像</text>
+      <image class='absolute ss-yzm-btn_1 r25' style="width: 80px; height: 80px; " src="{{perInfo.imgUrl}}"></image>
+      <image class='absolute ss-yzm-btn_1' style="width: 20px; height: 20px; display: inline-block;" src="../../assets/jt_right.png"></image>
+    </view>
+
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>昵称</text>
+      <text class='fr fs16 threec'>{{perInfo.name}}</text>
+      <image class='absolute ss-yzm-btn_1' style="width: 20px; height: 20px; display: inline-block;" src="../../assets/jt_right.png"></image>
+    </view>
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>性别</text>
+      <text class='fr fs16 threec'>{{perInfo.sex}}</text>
+      <image class='absolute ss-yzm-btn_1' style="width: 20px; height: 20px; display: inline-block;" src="../../assets/jt_right.png"></image>
+    </view>
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>所属企业</text>
+      <text class='fr fs16 threec'>{{perInfo.compant}}</text>
+      <image class='absolute ss-yzm-btn_1' style="width: 20px; height: 20px; display: inline-block;" src="../../assets/jt_right.png"></image>
+    </view>
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>手机</text>
+      <text class='fr fs16 threec'>{{perInfo.tel}}</text>
+      <image class='absolute ss-yzm-btn_1' style="width: 20px; height: 20px; display: inline-block;" src="../../assets/jt_right.png"></image>
+    </view>
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>座机</text>
+      <text class='fr fs16 threec'>{{perInfo.phone}}</text>
+      <image class='absolute ss-yzm-btn_1' style="width: 20px; height: 20px; display: inline-block;" src="../../assets/jt_right.png"></image>
+    </view>
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>邮箱</text>
+      <text class='fr fs16 threec'>{{perInfo.mail}}</text>
+      <image class='absolute ss-yzm-btn_1' style="width: 20px; height: 20px; display: inline-block;" src="../../assets/jt_right.png"></image>
+    </view>
+  </view>
+</view>
+
+   <!-- name: '杨先生',
+        sex: '男',
+        compant: '方略陆港',
+        tel: '12345678',
+        phone: '0351-123456',
+        mail: ' -->

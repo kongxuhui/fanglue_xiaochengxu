@@ -1,0 +1,14 @@
+<!-- 引入批车详情的模板 -->
+<import src="../../tpl/batchCarList/batchCarList.wxml"/>
+
+<block wx:if="{{loadingShow}}">
+  <loading>
+    加载中...
+  </loading>
+</block>
+
+<view>
+  <block wx:for="{{trainApprovalDetailList}}" wx:for-index='id' wx:key='id'>
+    <template is='batchCarList' data='{{...item}}' />
+  </block>
+</view>
